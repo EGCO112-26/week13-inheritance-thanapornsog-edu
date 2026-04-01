@@ -1,26 +1,24 @@
+#ifndef MU_PERSON_H
+#define MU_PERSON_H
+#include <iostream>
+#include <string>
+#include "Thai_person.h" 
+#include "NODE.h"
 
-class MU_person{
-private: long id;
-	string name;
+using namespace std;
+
+class MU_person : public Thai_person, public NODE {
 protected:
+    string name;
 
 public:
-	MU_person(long=112 ,string ="Prapaporn");
-  void display_person();
-  ~MU_person();
-};
-
-
-
-MU_person::~MU_person(){
-  cout<<"Destructor id="<<id<<endl;
-}
-MU_person::MU_person(long x,string n){
-   	  // Set up all MU_Person values
-         cout<<"MU person constructor "<<id<<endl;
-}
-
-void MU_person::display_person(){
-  
+    MU_person(long x = 112, string n = "Prapaporn", long nid = 1010101) 
+        : Thai_person(nid), NODE(x) {
+        name = n;
+        
+        cout << "MU person constructor " << data << endl;
+    }
     
-}
+    virtual ~MU_person() {}
+};
+#endif
