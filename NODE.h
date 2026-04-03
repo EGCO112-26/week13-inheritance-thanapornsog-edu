@@ -17,7 +17,7 @@ public:
     } 
     
     virtual void display() { 
-        cout << " Node data:" << data << endl; 
+        cout << "Node data:" << data << endl; 
     }
     
     void set_next(NODE* n) { next = n; }
