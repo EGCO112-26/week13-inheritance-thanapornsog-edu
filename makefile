@@ -1,2 +1,2 @@
-target: MU_Person.h student.h main.cpp
-	g++ main.cpp -o inh
+target: main.cpp LL.cpp MU_Person.h student.h
+	g++ main.cpp LL.cpp MU_Person.h student.h -o inh
